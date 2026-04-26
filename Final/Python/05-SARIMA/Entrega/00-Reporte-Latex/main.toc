@@ -1,0 +1,88 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Planteamiento del problema}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Objetivo general}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Objetivos específicos}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Justificación}{2}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Hipótesis}{3}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Desarrollo}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Partición de la Serie para su Análisis}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Serie Sin Transformaciones}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Diferencias Estacionales de la Serie Sin Transformar}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Primera Diferencia Estacional}{6}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Segunda Diferencia Estacional}{8}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Tercera Diferencia Estacional}{9}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Comparación de Desviaciones Estándar con Distintas Diferencias}{10}{subsubsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.4}Serie con Transformación}{11}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Estimación Puntual de $\lambda $}{11}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Intervalo de Confianza}{12}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Serie Transformada}{12}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.5}Diferencias Estacionales de la Serie con Transformación}{14}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Primera Diferencia Estacional}{14}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Segunda Diferencia Estacional}{15}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}Tercera Diferencia Estacional}{16}{subsubsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.4}Comparación de Desviaciones Estándar con Distintas Diferencias}{17}{subsubsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.6}Modelado}{18}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Serie sin Transformaciones}{18}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Serie Transformada}{26}{subsubsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.7}Modelos Propuestos}{27}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Primer Modelo para la Serie Sin Transformar}{27}{subsubsection.2.7.1}%
+\contentsline {paragraph}{Parsimonia}{27}{figure.caption.21}%
+\contentsline {paragraph}{Invertibilidad}{28}{figure.caption.21}%
+\contentsline {paragraph}{Estacionariedad}{28}{figure.caption.21}%
+\contentsline {paragraph}{Residuos Independientes}{28}{figure.caption.21}%
+\contentsline {paragraph}{Residuos con Media Cero}{29}{table.caption.22}%
+\contentsline {paragraph}{Residuos con Varianza Constante}{29}{table.caption.22}%
+\contentsline {paragraph}{Residuos con Distribución Normal}{29}{table.caption.22}%
+\contentsline {paragraph}{Gráfico de los Residuos}{30}{table.caption.22}%
+\contentsline {subsubsection}{\numberline {2.7.2}Segundo Modelo para la Serie Sin Transformar}{31}{subsubsection.2.7.2}%
+\contentsline {paragraph}{Parsimonia}{31}{table.caption.24}%
+\contentsline {paragraph}{Invertibilidad}{31}{table.caption.24}%
+\contentsline {paragraph}{Estacionariedad}{32}{table.caption.24}%
+\contentsline {paragraph}{Residuos Independientes}{32}{table.caption.24}%
+\contentsline {paragraph}{Residuos con Media Cero}{32}{table.caption.25}%
+\contentsline {paragraph}{Residuos con Varianza Constante}{33}{table.caption.25}%
+\contentsline {paragraph}{Residuos con Distribución Normal}{33}{table.caption.25}%
+\contentsline {paragraph}{Gráfico de los Residuos}{34}{table.caption.25}%
+\contentsline {subsubsection}{\numberline {2.7.3}Tercer Modelo para la Serie Sin Transformar}{35}{subsubsection.2.7.3}%
+\contentsline {paragraph}{Parsimonia}{35}{table.caption.27}%
+\contentsline {paragraph}{Invertibilidad}{35}{table.caption.27}%
+\contentsline {paragraph}{Estacionariedad}{35}{table.caption.27}%
+\contentsline {paragraph}{Residuos Independientes}{36}{table.caption.27}%
+\contentsline {paragraph}{Residuos con Media Cero}{36}{table.caption.28}%
+\contentsline {paragraph}{Residuos con Varianza Constante}{37}{table.caption.28}%
+\contentsline {paragraph}{Residuos con Distribución Normal}{37}{table.caption.28}%
+\contentsline {paragraph}{Gráfico de los Residuos}{37}{table.caption.28}%
+\contentsline {subsubsection}{\numberline {2.7.4}Cuarto Modelo para la Serie Sin Transformar}{39}{subsubsection.2.7.4}%
+\contentsline {subsubsection}{\numberline {2.7.5}Primer Modelo Propuesto para la Serie Transformada}{40}{subsubsection.2.7.5}%
+\contentsline {paragraph}{Residuos Independientes}{40}{table.caption.31}%
+\contentsline {subsubsection}{\numberline {2.7.6}Segundo Modelo Propuesto para la Serie Transformada}{42}{subsubsection.2.7.6}%
+\contentsline {paragraph}{Parsimonia}{42}{table.caption.34}%
+\contentsline {paragraph}{Invertibilidad}{42}{table.caption.34}%
+\contentsline {paragraph}{Estacionariedad}{42}{table.caption.34}%
+\contentsline {paragraph}{Residuos Independientes}{43}{table.caption.34}%
+\contentsline {paragraph}{Residuos con Media Cero}{43}{table.caption.35}%
+\contentsline {paragraph}{Residuos con Varianza Constante}{43}{table.caption.35}%
+\contentsline {paragraph}{Residuos con Distribución Normal}{44}{table.caption.35}%
+\contentsline {subsection}{\numberline {2.8}Modelo Seleccionado}{46}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Pronóstico}{48}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {2.9.1}Método Forecast}{48}{subsubsection.2.9.1}%
+\contentsline {paragraph}{Modelo Obtenido con la Serie Sin Transformar}{48}{subsubsection.2.9.1}%
+\contentsline {paragraph}{Modelo Obtenido con la Serie Transformada}{49}{figure.caption.40}%
+\contentsline {paragraph}{Comparación entre Ambos Modelos}{50}{figure.caption.42}%
+\contentsline {subsubsection}{\numberline {2.9.2}Pronóstico Óptimo}{51}{subsubsection.2.9.2}%
+\contentsline {paragraph}{Desarrollo para el Pronóstico Óptimo}{51}{subsubsection.2.9.2}%
+\contentsline {paragraph}{Resultados del Pronóstico Óptimo}{52}{subsubsection.2.9.2}%
+\contentsline {paragraph}{Intervalo de Confianza}{52}{subsubsection.2.9.2}%
+\contentsline {subparagraph}{Cálculo de las $\psi $}{53}{subsubsection.2.9.2}%
+\contentsline {subparagraph}{Desviación Estándar del Ruido Blanco}{53}{subsubsection.2.9.2}%
+\contentsline {subparagraph}{Intervalos de Predicción}{53}{subsubsection.2.9.2}%
+\contentsline {subparagraph}{Desestandarización}{54}{subsubsection.2.9.2}%
+\contentsline {subparagraph}{Resultados}{55}{subsubsection.2.9.2}%
+\contentsline {subparagraph}{Comparación}{56}{figure.caption.46}%
+\contentsline {subsection}{\numberline {2.10}Actualización de Pronóstico}{57}{subsection.2.10}%
+\contentsline {subsubsection}{\numberline {2.10.1}Método Forecast}{57}{subsubsection.2.10.1}%
+\contentsline {subsubsection}{\numberline {2.10.2}Actualización de Pronóstico}{58}{subsubsection.2.10.2}%
+\contentsline {subsubsection}{\numberline {2.10.3}Comparación}{59}{subsubsection.2.10.3}%
+\contentsline {section}{\numberline {3}Conclusiones}{60}{section.3}%
+\contentsline {section}{\numberline {4}Referencias}{61}{section.4}%

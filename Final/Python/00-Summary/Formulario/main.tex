@@ -1,0 +1,545 @@
+\documentclass[12pt]{article} % Cambié el tamaño de fuente general
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage[letterpaper, top=0.2in, bottom=0.2in, left=0.2in, right=0.2in]{geometry}
+
+\usepackage{fancyhdr}
+\usepackage{lmodern} % Mejora la tipografía general
+
+\setlength{\columnsep}{20pt} % Espacio entre columnas
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty} % Eliminar numeración de página
+
+\usepackage{titlesec}
+
+% Formato de título
+\titleformat{\section}[block]{\footnotesize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[block]{\footnotesize\bfseries}{\thesubsection}{1em}{}
+
+% Espaciado de títulos: \titlespacing{comando}{izquierda}{antes}{después}
+\titlespacing{\section}{0pt}{1ex}{0.5ex}
+\titlespacing{\subsection}{0pt}{0.25ex}{0.25ex}
+
+\begin{document}
+
+\begin{multicols}{3}
+
+\tiny 
+
+
+\section*{Propiedades de la Varianza}
+\[
+\operatorname{Var}(X) = \mathbb{E}[(X - \mathbb{E}[X])^2] = \mathbb{E}[X^2] - (\mathbb{E}[X])^2
+\]
+\[
+\operatorname{Var}(X + b) = \operatorname{Var}(X)
+\]
+\[
+\operatorname{Var}(-aX) = a^2 \cdot \operatorname{Var}(X)
+\]
+\[
+\operatorname{Var}(a) = 0
+\]
+\[
+\operatorname{Var}(X + Y) = \operatorname{Var}(X) + \operatorname{Var}(Y) + 2 \cdot \operatorname{Cov}(X, Y)
+\]
+\[
+X \perp Y \Rightarrow \operatorname{Var}(X + Y) = \operatorname{Var}(X) + \operatorname{Var}(Y)
+\]
+\[
+\operatorname{Var}(aX + bY) = a^2 \operatorname{Var}(X) + b^2 \operatorname{Var}(Y) + 2ab \cdot \operatorname{Cov}(X, Y)
+\]
+\section*{Propiedades de la Covarianza}
+\[
+\operatorname{Cov}(X, Y) = \operatorname{Cov}(Y, X)
+\]
+\[
+\operatorname{Cov}(aX + b, Y) = a \cdot \operatorname{Cov}(X, Y)
+\]
+\[
+\operatorname{Cov}(aX + bZ, Y) = a \cdot \operatorname{Cov}(X, Y) + b \cdot \operatorname{Cov}(Z, Y)
+\]
+\[
+X \perp Y \Rightarrow \operatorname{Cov}(X, Y) = 0
+\]
+\[
+\operatorname{Cov}(X, X) = \operatorname{Var}(X)
+\]
+\[
+\operatorname{Cov}(X, Y) = \mathbb{E}[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]
+\]
+\section*{Estacionariedad débil}
+Un proceso estocástico \( \{X_t\}_{t \in \mathbb{Z}} \) se dice que es \textbf{estacionario débil} (o \textbf{de segundo orden}) si cumple las siguientes dos condiciones:
+La esperanza es constante e independiente del tiempo:
+    \[
+    \mu_{X_t} := \mathbb{E}[X_t] = \mu \quad \text{para todo } t
+    \]
+La función de autocovarianza depende solo del desfase \( h \), es decir:
+    \[
+    \gamma_X(t, t+h) := \text{Cov}(X_t, X_{t+h}) = \gamma(h) \quad \text{para todo } t,h
+    \]
+\section*{Estacionariedad e Invertibilidad}
+Para un proceso AR(1) o MA(1), el coeficiente debe ser menor que 1 en valor absoluto.  
+Para un proceso AR($p$) o MA($q$), el \textbf{módulo de las raíces del polinomio característico} debe ser mayor que 1.
+El módulo se calcula como el valor absoluto de las raíces del polinomio asociado al modelo.
+\section*{Región Admisible (2)}
+\[
+\begin{cases}
+|\phi_2| < 1 \\
+\phi_1 + \phi_2 < 1 \\
+\phi_2 - \phi_1 < 1
+\end{cases}
+\]
+\section*{Módulo}
+Dado un número complejo:
+\[
+z = a + bi \quad \text{con } a, b \in \mathbb{R}
+\]
+el \textbf{módulo} (o valor absoluto) de \( z \), denotado por \( |z| \), se define como:
+\[
+|z| = \sqrt{a^2 + b^2}
+\]
+\section*{Discriminante de (2)}
+\[
+D = \phi_1^2 + 4\phi_2
+\]
+\section*{FACV de un AR(p)}
+Las ecuaciones de Yule-Walker para las autocovarianzas de un AR(p) se expresan como:
+\[
+\begin{bmatrix}
+\gamma_1 \\
+\gamma_2 \\
+\gamma_3 \\
+\gamma_4 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\gamma_0 & \gamma_1 & \gamma_2 & \gamma_3 \\
+\gamma_1 & \gamma_0 & \gamma_1 & \gamma_2 \\
+\gamma_2 & \gamma_1 & \gamma_0 & \gamma_1 \\
+\gamma_3 & \gamma_2 & \gamma_1 & \gamma_0 \\
+\end{bmatrix}
+\begin{bmatrix}
+\phi_1 \\
+\phi_2 \\
+\phi_3 \\
+\phi_4 \\
+\end{bmatrix}
+\]
+Lo que implica, por ejemplo:
+\[
+\gamma_1 = \phi_1 \gamma_0 + \phi_2 \gamma_1 + \phi_3 \gamma_2 + \phi_4 \gamma_3
+\]
+La relación de recurrencia es:
+\[
+\rho_k = \phi_1 \rho_{k-1} + \phi_2 \rho_{k-2} + \dots + \phi_p \rho_{k-p}, \quad k > p
+\]
+Para encontrar los parámetros, dadas las correlaciones, se resuelve el sistema de ecuaciones lineales como una matriz aumentada:
+\[
+\left[
+\begin{array}{ccc|c}
+1 & \rho_1 & \rho_2 & \rho_1 \\
+\rho_1 & 1 & \rho_1 & \rho_2 \\
+\rho_2 & \rho_1 & 1 & \rho_3 \\
+\end{array}
+\right]
+\]
+\section*{FACV de un MA(q)}
+La matriz de la función autorregresiva inversa (FAV) para un MA(q) tiene la siguiente estructura:
+\[
+\begin{bmatrix}
+1 & \cdots \\
+-\theta_1 & \theta_1^2 & \cdots \\
+-\theta_2 & \theta_2\theta_1 & \theta_2^2 & \cdots \\
+\vdots & \vdots & \vdots & \ddots &  \\
+-\theta_q & \theta_q\theta_1 & \theta_q\theta_2 &\cdots & \theta_q^2 \\
+\end{bmatrix}
+\sigma^2_e
+\]
+La varianza total de un MA(q) es:
+\[
+\gamma_0 = \sigma_e^2 \left( 1 + \theta_1^2 + \theta_2^2 + \cdots + \theta_q^2 \right)
+\]
+Después de $q$, todas las autocovarianzas son 0.
+La correlación es $\rho_k = \gamma_k/\gamma_0$
+\section*{Valores Esperados}
+Multiplicas el proceso $X_t$ por lo que quieres y le sacas el valor esperado. Ejemplo:
+\vspace{-5pt}
+\begin{align*}
+&(1 - \phi_1 B - \phi_2 B^2) X_t = (1 - \theta_1 B - \theta_2 B^2) e_t \\
+&X_t - \phi_1 X_{t-1} - \phi_2 X_{t-2} = e_t - \theta_1 e_{t-1} - \theta_2 e_{t-2} \\
+&X_t = \phi_1 X_{t-1} + \phi_2 X_{t-2} + e_t - \theta_1 e_{t-1} - \theta_2 e_{t-2}
+\end{align*}
+\vspace{-20pt}
+\begin{align*}
+\mathbb{E}[X_t e_t] &= \sigma_e^2 \\
+\mathbb{E}[X_t e_{t+h}] &= 0 \\
+\mathbb{E}[X_t e_{t-h}] &= \text{Multiplica todo} \\
+\mathbb{E}[e_t e_t] &= \sigma_e^2 \\
+\mathbb{E}[X_t X_t] &= \gamma_0 \\
+\mathbb{E}[X_t X_{t-h}] &= \gamma_h \\
+\end{align*}
+\section*{Representación \(\psi_i\) y convergencia}
+\[
+X_t - \phi X_{t-1} = \mu + e_t
+\]
+\[
+X_t = \phi X_{t-1} + \mu + e_t
+\]
+\begin{align*}
+X_t &= \phi (\phi X_{t-2} + \mu + e_{t-1}) + \mu + e_t \\
+    &= \phi^h X_{t-h} + \sum_{i=0}^{h-1} \phi^i (\mu + e_{t-i})
+\end{align*}
+cuando \( h \to \infty \), y suponiendo que \( |\phi| < 1 \)
+\[
+X_t = \sum_{i=0}^{\infty} \phi^i (\mu + e_{t-i})
+\]
+Esta es una representación MA($\infty$) del proceso AR(1), donde los coeficientes \( \psi_i = \phi^i \). La serie \( \sum_{i=0}^{\infty} \phi^i \) es convergente si \( |\phi| < 1 \), y su suma es una serie geométrica:
+\section*{Serie Geométrica}
+\[
+\sum_{i=0}^{\infty} \phi^i = \frac{1}{1 - \phi}
+\]
+Por lo tanto, la suma ponderada de los efectos pasados converge, y la media del proceso se puede escribir como:
+\[
+\mathbb{E}[X_t] = \sum_{i=0}^{\infty} \phi^i \mu = \mu \cdot \frac{1}{1 - \phi}
+\]
+
+
+\section*{MA($\infty$) del proceso AR(2)}
+\[
+X_t - \phi_1 X_{t-1} - \phi_2 X_{t-2} = \mu + e_t
+\]
+
+Nuestro objetivo es expresar este proceso en su forma (MA($\infty$)), es decir, encontrar coeficientes \( \psi_i \) tales que:
+
+\[
+X_t = \sum_{i=0}^{\infty} \psi_i e_{t-i} + \text{constante}
+\]
+
+ AR(2) puede escribirse como:
+
+\[
+(1 - \phi_1 B - \phi_2 B^2) X_t = \mu + e_t
+\]
+\[
+X_t = \boldsymbol{\phi}^{-1}(B)(\mu + e_t)
+\]
+
+Si el proceso es estacionario, entonces \( \boldsymbol{\phi}(B)^{-1} \) puede expandirse como una serie de potencias:
+
+\[
+\boldsymbol{\phi}^{-1}(B) = \sum_{i=0}^{\infty} \psi_i B^i
+\]
+
+Aplicando esta expansión, obtenemos:
+
+\[
+X_t = \sum_{i=0}^{\infty} \psi_i (\mu + e_{t-i}) = \mu \sum_{i=0}^{\infty} \psi_i + \sum_{i=0}^{\infty} \psi_i e_{t-i}
+\]
+
+Por lo tanto, la representación MA($\infty$) del proceso AR(2) es:
+
+\[
+X_t = \underbrace{\mu \sum_{i=0}^{\infty} \psi_i}_{\text{media}} + \sum_{i=0}^{\infty} \psi_i e_{t-i}
+\]
+
+Finalmente, el valor esperado del proceso es:
+
+\[
+\mathbb{E}[X_t] = \mu \sum_{i=0}^{\infty} \psi_i
+\]
+
+
+
+
+\section*{Media de un  ARMA(p, q)}
+Consideremos el modelo:
+\[
+X_t = \phi_1 X_{t-1} + \cdots + \phi_p X_{t-p} + e_t + \theta_1 e_{t-1} + \cdots + \theta_q e_{t-q}
+\]
+Donde \( \{e_t\} \sim WN(0, \sigma_e^2) \). Si el proceso es estacionario, entonces su media \( \mu = \mathbb{E}[X_t] \) es constante en el tiempo.
+\[
+\mu = \frac{c}{1 - \phi_1 - \cdots - \phi_p}
+\]
+\section*{Operador Diferencia}
+\[
+\nabla^d X_t =(1-B)^d X_t 
+\]
+\section*{Autocorrelación \(\rho_k\)}
+Supones que $\hat{\rho}_0=0$
+\[
+|\hat{r}_k| > 2 \sqrt{ \frac{1}{n} \left( 1 + 2 \sum_{j=1}^{q} \hat{\rho}_j^2 \right) }
+\]
+\section*{Autocorrelación Parcial \(\phi_{kk}\)}
+\[
+|\hat{\phi}_{kk}| > 2 \sqrt{ \frac{1}{n} }
+\]
+\section*{Cálculo de las Autocorrelaciones Parciales}
+\[
+\phi_{11} = \rho_1
+\]
+\[
+\phi_{22}=
+\frac{
+\text{det}\begin{bmatrix}
+1  & \rho_{1} \\
+\rho_{p-1} & \rho_p
+\end{bmatrix}
+}{
+\text{det}\begin{bmatrix}
+1 & \rho_1 \\
+\rho_1 & 1 
+\end{bmatrix}
+}
+\]
+\[
+\phi_{33}=
+\frac{
+\text{det}\begin{bmatrix}
+1 & \rho_1  & \rho_{1} \\
+\rho_1 & 1  & \rho_{2} \\
+\rho_{p-1} & \rho_{p-2} & \rho_p
+\end{bmatrix}
+}{
+\text{det}\begin{bmatrix}
+1 & \rho_1 & \rho_2 \\
+\rho_1 & 1 & \rho_1 \\
+\rho_2 & \rho_1 & 1 
+\end{bmatrix}
+}
+\]
+
+ 
+ Se obtiene como:
+ $\phi_{kk}$ Se obtiene como:
+\[
+\frac{
+\text{det}\begin{bmatrix}
+1 & \rho_1 & \rho_2 & \cdots & \rho_{p-2} & \rho_{1} \\
+\rho_1 & 1 & \rho_1 & \cdots & \rho_{p-3} & \rho_{2} \\
+\rho_2 & \rho_1 & 1 & \cdots & \rho_{p-4} & \rho_{3} \\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+\rho_{p-1} & \rho_{p-2} & \rho_{p-3} & \cdots & \rho_1 & \rho_p
+\end{bmatrix}
+}{
+\text{det}\begin{bmatrix}
+1 & \rho_1 & \rho_2 & \cdots & \rho_{p-2}& \rho_{p-1} \\
+\rho_1 & 1 & \rho_1 & \cdots & \rho_{p-3} & \rho_{p-2}\\
+\rho_2 & \rho_1 & 1 & \cdots & \rho_{p-4} & \rho_{p-3}\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+\rho_{p-1} & \rho_{p-2} & \rho_{p-3} & \cdots & \rho_{1} & 1 
+\end{bmatrix}
+}
+\]
+
+\section*{Polinomios Característicos}
+$\Pi$ y $\Psi$ son polinomios infínitos.
+\begin{align*}
+\boldsymbol{\phi}(B) &= 1 - \phi_1 B - \phi_2 B^2 - \dots - \phi_p B^p \\
+\boldsymbol{\theta}(B) &= 1 + \theta_1 B + \theta_2 B^2 + \dots + \theta_q B^q \\
+\boldsymbol{\psi}(B) &= \boldsymbol{\phi}^{-1}(B) \, \boldsymbol{\theta}(B) \\
+\boldsymbol{\pi}(B) &= \boldsymbol{\theta}^{-1}(B) \, \boldsymbol{\phi}(B) \\
+\boldsymbol{\theta}(B) \, \boldsymbol{\pi}(B) &= \boldsymbol{\phi}(B) \\
+\boldsymbol{\phi}(B) \, \boldsymbol{\psi}(B) &= \boldsymbol{\theta}(B)
+\end{align*}
+
+
+
+
+\end{multicols}
+\newpage
+
+\begin{multicols}{2}
+\tiny % Camb
+
+
+\section*{FACV ARMA(1,1)}
+
+\[
+X_t = \phi_1 X_{t-1} + e_t - \theta_1 e_{t-1}
+\]
+
+
+\begin{align*}
+\gamma_0 - \phi_1 \gamma_1  &= \sigma^2 - \theta_1 ( \phi_1 \sigma^2 - \theta_1 \sigma^2 )\\
+\gamma_1 - \phi_1 \gamma_0 &= - \theta_1 \sigma^2 \\
+\gamma_k &= \phi_1  \gamma_{k-1}, \quad k \geq 2
+\end{align*}
+
+\[
+\begin{bmatrix}
+1 & -\phi_1 \\
+-\phi_1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\gamma_0 \\
+\gamma_1
+\end{bmatrix}
+=
+\begin{bmatrix}
+\sigma^2 - \theta_1 (\phi_1 \sigma^2 - \theta_1 \sigma^2) \\
+-\theta_1 \sigma^2
+\end{bmatrix}
+\]
+
+
+
+\section*{FACV ARMA(2,1)}
+
+\[
+X_t = \phi_1 X_{t-1} + \phi_2 X_{t-2} + e_t - \theta_1 e_{t-1}
+\]
+
+
+\begin{align*}
+\gamma_0 - \phi_1 \gamma_1 - \phi_2 \gamma_2 &= (1 - \phi_1 \theta + \theta^2) \sigma^2_{\epsilon} \\
+\gamma_1 - \phi_1 \gamma_0 - \phi_2 \gamma_1 &= -\theta \sigma^2_{\epsilon} \\
+\gamma_2 - \phi_1 \gamma_1 - \phi_2 \gamma_0 &= 0
+\end{align*}
+
+\[
+\begin{bmatrix}
+1 & -\phi_1 & -\phi_2 \\
+-\phi_1 & 1 - \phi_2 & 0 \\
+-\phi_2 & -\phi_1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\gamma_0 \\
+\gamma_1 \\
+\gamma_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+(1 - \phi_1 \theta + \theta^2)\sigma^2_{\epsilon} \\
+-\theta \sigma^2_{\epsilon} \\
+0
+\end{bmatrix}
+\]
+
+
+
+\section*{FACV ARMA(1,2)}
+
+
+\[
+X_t = \phi_1 X_{t-1} + e_t - \theta_1 e_{t-1} - \theta_2 e_{t-2}
+\]
+
+\begin{align*}
+\gamma_0 - \phi_1 \gamma_1
+&= (1 - \theta_1(\phi_1 -\theta_1)-\theta_2(\phi_1(\phi_1-\theta_1) - \theta_2))) \sigma^2_{\epsilon} \\
+\gamma_1 - \phi_1 \gamma_0
+&= (-\theta_1 - \theta_2(\phi_1-\theta_1) )\sigma^2_{\epsilon} \\
+\gamma_2 - \phi_1 \gamma_1 &= -\theta_2 \sigma^2_\epsilon
+\end{align*}
+
+\[
+\begin{bmatrix}
+1 & -\phi_1 \\
+-\phi_1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\gamma_0 \\
+\gamma_1
+\end{bmatrix}
+=
+\begin{bmatrix}
+\left(1 - \theta_1(\phi_1 -\theta_1) - \theta_2(\phi_1(\phi_1-\theta_1) - \theta_2) \right) \sigma^2_{\epsilon} \\
+\left(-\theta_1 - \theta_2(\phi_1-\theta_1) \right) \sigma^2_{\epsilon}
+\end{bmatrix}
+\]
+
+
+
+
+
+
+
+
+
+
+\section*{Desarrollo del producto {$\theta(B)\pi(B)=\phi(B)$}}
+
+Para un ARMA(1,2)
+
+\[
+(1 - \theta_1 B - \theta_2 B^2)(1 - \pi_1 B - \pi_2 B^2 - \pi_3 B^3 - \cdots)
+\]
+
+
+\[
+\begin{aligned}
+\phi(B)&= 1 \\
+&\quad - B (\pi_1 + \theta_1) \\
+&\quad - B^2 (\pi_2 + \theta_2 - \pi_1 \theta_1) \\
+&\quad - B^3 (\pi_3 - \theta_1 \pi_2 - \theta_2 \pi_1) + \cdots
+\end{aligned}
+\]
+
+
+\begin{align*}
+\pi_1 + \theta_1 &= \phi_1 \\
+\pi_2 + \theta_2 - \pi_1 \theta_1 &= 0 \\
+\pi_3 - \theta_1 \pi_2 - \theta_2 \pi_1 &= 0
+\end{align*}
+
+
+\[
+\begin{aligned}
+\pi_1 &= \phi_1 - \theta_1 \\
+\pi_2 &=  \pi_1 \theta_1 - \theta_2 \\
+\pi_3 &= \theta_1 \pi_2 + \theta_2 \pi_1
+\end{aligned}
+\]
+
+\subsection*{Fórmulas recursivas para los coeficientes $\pi_j$}
+
+\[
+\begin{aligned}
+\pi_1 &= \phi_1 - \theta_1 \\
+\pi_2 &= \phi_2 + \pi_1 \theta_1 - \theta_2 \\
+\pi_3 &= \phi_3 + \pi_2 \theta_1 + \pi_1 \theta_2 \\
+\pi_4 &= \phi_4 + \pi_3 \theta_1 + \pi_2 \theta_2 \\
+&\quad \vdots
+\end{aligned}
+\]
+
+En general, para \( j \geq 1 \):
+
+\[
+\pi_j = \phi_j + \sum_{k=1}^{\min(j,q)} \pi_{j-k} \theta_k
+\]
+
+(si \( j > p \), entonces \( \phi_j = 0 \))
+
+\subsection*{Fórmulas recursivas para los coeficientes $\psi_j$}
+
+\[
+\begin{aligned}
+\psi_0 &= 1 \\
+\psi_1 &= \theta_1 + \phi_1 \\
+\psi_2 &= \theta_2 + \phi_1 \psi_1 + \phi_2 \\
+\psi_3 &= \theta_3 + \phi_1 \psi_2 + \phi_2 \psi_1 + \phi_3 \\
+\psi_4 &= \theta_4 + \phi_1 \psi_3 + \phi_2 \psi_2 + \phi_3 \psi_1 + \phi_4 \\
+&\quad \vdots
+\end{aligned}
+\]
+
+En general, para \( j \geq 1 \):
+
+\[
+\psi_j = \theta_j + \sum_{k=1}^{\min(j,p)} \phi_k \psi_{j-k}
+\]
+
+\textit{(si \( j > q \), entonces \( \theta_j = 0 \))}
+
+
+\end{multicols}
+\end{document}
+
