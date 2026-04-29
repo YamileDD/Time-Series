@@ -1,4 +1,3 @@
-install.packages("fpp2")
 install.packages("tseries")
 install.packages("lmtest")
 install.packages("car")
